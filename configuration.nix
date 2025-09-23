@@ -154,7 +154,8 @@
     rofi-wayland
     material-cursors
     nwg-look
-    vim-full
+    nwg-displays
+    vim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -169,6 +170,7 @@
     ll = "ls -lh";
     nrs = "sudo nixos-rebuild switch --upgrade";
     ncg = "sudo nix-collect-garbage -d && sudo nix-store --optimise -vv";
+    bb = "watch cat /sys/class/power_supply/BAT0/capacity"; 
   };
 
   # List services that you want to enable:
