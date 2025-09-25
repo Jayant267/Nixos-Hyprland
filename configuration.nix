@@ -144,6 +144,7 @@
     vulkan-tools
     intel-media-driver
     intel-vaapi-driver
+    nerd-fonts.hack
     pavucontrol
     waybar
     hyprpaper

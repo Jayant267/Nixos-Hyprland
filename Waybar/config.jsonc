@@ -25,7 +25,9 @@
         "custom/sep",
         "disk",
         "custom/sep",
-        "clock"
+        "clock",
+        "custom/sep",
+	"battery"
     ],
 
     // Modules configuration
@@ -35,8 +37,9 @@
         "warp-on-scroll": false,
         "format": "{name}",
         "persistent-workspaces": {
-            "eDP-1" : [ 1 ],
-	    "HDMI-A-1" : [ 2,3,4,5 ]
+		"*" : 5
+           // "eDP-1" : [ 1 ],
+	   // "HDMI-A-1" : [ 2,3,4,5 ]
         }
     },
     "hyprland/window" : {
@@ -72,8 +75,8 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "Bat: {capacity}% {icon} {time}",
-        "format-plugged": "{capacity}% ",
+        "format": "Bat:{capacity}%{time}",
+        "format-plugged": "{capacity}%",
         "format-alt": "Bat {capacity}%",
         "format-time": "{H}:{M}",
         "format-icons": ["", "", "", "", ""]
