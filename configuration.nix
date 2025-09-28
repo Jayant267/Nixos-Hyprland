@@ -145,6 +145,7 @@
     intel-media-driver
     intel-vaapi-driver
     nerd-fonts.hack
+    brightnessctl
     pavucontrol
     waybar
     hyprpaper
