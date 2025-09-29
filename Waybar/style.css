@@ -70,18 +70,18 @@ button:hover {
 }
 
 #battery {
-    color: @mag;
-    border-bottom: 4px solid @mag;
+    color: #e55acc;
+    border-bottom: 4px solid #e55acc;
 }
 
 #disk {
-    color: @ylw;
-    border-bottom: 4px solid @ylw;
+    color: #c78248;
+    border-bottom: 4px solid #c78248;
 }
 
 #memory {
-    color: @mag;
-    border-bottom: 4px solid @mag;
+    color: #815CCC;
+    border-bottom: 4px solid #815CCC;
 }
 
 #cpu {

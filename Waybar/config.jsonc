@@ -27,7 +27,8 @@
         "custom/sep",
         "battery",
         "custom/sep",
-	"clock"
+	"clock",
+        "custom/sep"
     ],
 
     // Modules configuration
