@@ -80,13 +80,13 @@ button:hover {
 }
 
 #memory {
-    color: #815CCC;
-    border-bottom: 4px solid #815CCC;
+    color: #59D999;
+    border-bottom: 4px solid #59D999; 
 }
 
 #cpu {
-    color: @grn;
-    border-bottom: 4px solid @grn;
+    color: #DDE344;
+    border-bottom: 4px solid #DDE344;
 }
 
 #network {
