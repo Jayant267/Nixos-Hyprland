@@ -1,0 +1,56 @@
+# Alacritty configuration file (alacritty.toml)
+
+# Window configuration
+[window]
+# Enable transparency (value between 0.0 and 1.0; 0.8 means 80% opacity)
+opacity = 0.8
+# Optional: Add blur effect (Linux only, requires compositor support)
+blur = true
+
+# Window dimensions (in pixels)
+dimensions = { columns = 80, lines = 24 }
+
+# Padding between text and window borders (in pixels)
+padding = { x = 10, y = 10 }
+
+# Window decorations ("Full" for title bar, "None" for borderless)
+decorations = "Full"
+
+# Dynamic padding (adjusts padding when window is resized)
+dynamic_padding = false
+
+# Font configuration
+[font]
+# Font size in points
+size = 12.0
+
+# Normal font
+normal = { family = "Fira Code", style = "Regular" }
+
+# Bold font
+bold = { family = "Fira Code", style = "Bold" }
+
+# Italic font
+italic = { family = "Fira Code", style = "Italic" }
+
+# Colors (optional, for better contrast with transparency)
+[colors.primary]
+background = "#1a1b26" # Dark background for better transparency effect
+foreground = "#c0caf5"
+
+# Cursor configuration
+[cursor]
+style = { shape = "Block", blinking = "On" }
+
+# Shell configuration (optional)
+#[shell]
+#program = "/bin/zsh" # Use your preferred shell
+#args = ["-l"]
+
+# Other settings
+[scrolling]
+history = 10000
+multiplier = 3
+
+# Enable live config reload
+live_config_reload = true
