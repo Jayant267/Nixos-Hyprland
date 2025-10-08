@@ -70,8 +70,8 @@ button:hover {
 }
 
 #battery {
-    color: #e55acc;
-    border-bottom: 4px solid #e55acc;
+    color: #F67979;
+    border-bottom: 4px solid #F67979;
 }
 
 #disk {
@@ -85,13 +85,13 @@ button:hover {
 }
 
 #cpu {
-    color: #DDE344;
-    border-bottom: 4px solid #DDE344;
+    color: #6CC750;
+    border-bottom: 4px solid #6CC750;
 }
 
 #network {
-    color: @blu;
-    border-bottom: 4px solid @blu;
+    color: #956DED;
+    border-bottom: 4px solid #956DED;
 }
 
 #network.disconnected {

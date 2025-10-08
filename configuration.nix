@@ -157,7 +157,7 @@
     material-cursors
     nwg-look
     nwg-displays
-    vim
+    vim-full
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
