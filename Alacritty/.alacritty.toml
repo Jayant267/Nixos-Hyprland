@@ -54,3 +54,9 @@ multiplier = 3
 
 # Enable live config reload
 live_config_reload = true
+
+#import themes
+[general]
+import = [
+  "~/.alacritty/themes/catppuccin-mocha.toml",
+]
