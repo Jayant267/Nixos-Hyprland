@@ -1,0 +1,20 @@
+[root@nixos:~]# systemctl stop libvirtd.service libvirtd.socket libvirtd-admin.socket libvirtd-ro.socket libvirt-guests.service NetworkManager.service
+
+[root@nixos:~]# systemctl start libvirtd.service libvirtd.socket libvirtd-admin.socket libvirtd-ro.socket libvirt-guests.service NetworkManager.service
+-----------------------------------------------------------------------------
+[root@nixos:~]# systemctl stop libvirtd.service libvirtd.socket libvirtd-admin.socket libvirtd-ro.socket libvirt-guests.service NetworkManager.service
+
+[root@nixos:~]# systemctl start libvirtd.service libvirtd.socket libvirtd-admin.socket libvirtd-ro.socket libvirt-guests.service NetworkManager.service
+-----------------------------------------------------------------------------
+[root@nixos:~]# systemctl stop libvirtd.service libvirtd.socket libvirtd-admin.socket libvirtd-ro.socket libvirt-guests.service NetworkManager.service
+
+[root@nixos:~]# systemctl start libvirtd.service libvirtd.socket libvirtd-admin.socket libvirtd-ro.socket libvirt-guests.service NetworkManager.service
+-----------------------------------------------------------------------------
+[root@nixos:~]# systemctl stop libvirtd.service libvirtd.socket libvirtd-admin.socket libvirtd-ro.socket libvirt-guests.service NetworkManager.service
+
+[root@nixos:~]# systemctl start libvirtd.service libvirtd.socket libvirtd-admin.socket libvirtd-ro.socket libvirt-guests.service NetworkManager.service
+-----------------------------------------------------------------------------
+[root@nixos:~]# systemctl stop libvirtd.service libvirtd.socket libvirtd-admin.socket libvirtd-ro.socket libvirt-guests.service NetworkManager.service
+
+[root@nixos:~]# systemctl start libvirtd.service libvirtd.socket libvirtd-admin.socket libvirtd-ro.socket libvirt-guests.service NetworkManager.service
+-----------------------------------------------------------------------------
