@@ -70,6 +70,9 @@
   programs.hyprland.enable = true;
   programs.hyprland.xwayland.enable = true;
 
+  # Enable Niri
+  programs.niri.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -159,6 +162,7 @@
     nwg-look
     nwg-displays
     vim-full
+    swaybg
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -173,7 +177,7 @@
     ll = "ls -lh";
     nrs = "sudo nixos-rebuild switch --upgrade";
     ncg = "sudo nix-collect-garbage -d && sudo nix-store --optimise -vv";
-    bb = "watch cat /sys/class/power_supply/BAT0/capacity"; 
+    bbb = "shutdown now"; 
   };
 
   # List services that you want to enable:
