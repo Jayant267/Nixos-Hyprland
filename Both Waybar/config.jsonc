@@ -1,0 +1,105 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top", 
+    "position": "top", 
+    "height": 26, 
+    "spacing": 2, 
+
+    // Choose the order of the modules
+    "modules-left": [
+        "niri/workspaces",
+	"hyprland/workspaces",
+        "custom/sep",
+        "niri/window",
+        "hyprland/window",
+        "custom/sep"
+    ],
+   
+   
+    "modules-center": [
+    ],
+
+    "modules-right": [
+        "custom/sep",
+        "network",
+        "custom/sep",
+        "cpu",
+        "custom/sep",
+        "memory",
+        "custom/sep",
+        "battery",
+        "custom/sep",
+	"clock",
+        "custom/sep"
+    ],
+
+    // Modules configuration
+   "niri/workspaces": {
+    "format": "{value}",  // Shows raw numbers/names like "1", "2"
+    "on-click": "niri msg workspace goto {value}",  // Click to switch
+    "disable-click": false,
+    "all-outputs": true,  // Show workspaces from all monitors
+    "current-only": false  // Show all workspaces, not just active
+  },    
+      
+    "hyprland/workspaces": {
+    "format": "{name}",
+    "persistent-workspaces": {
+	     // "*" : 5
+            "eDP-1" : [ 1 ],
+	    "HDMI-A-1" : [ 2 ]
+        }
+    },
+   
+    "hyprland/window" : {
+        "max-length": 40,
+        "seperate-outputs": false
+    },
+   
+    "niri/window" : {
+    "max-length": 40,
+    "seperate-outputs": false
+    },
+
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "clock": {
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": ": {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 2,
+        "format": ": {used}GiB"
+    },
+    
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "interval": 2,
+	"format": "󰂂 {capacity}%{time}",
+        "format-plugged": "{capacity}%",
+        "format-time": "{H}:{M}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format": "Online",
+        "format-disconnected": "Disconnected ⚠"
+    },
+    "custom/sep": {
+        "format" : "|",
+        "interval" : 0
+    }
+}
