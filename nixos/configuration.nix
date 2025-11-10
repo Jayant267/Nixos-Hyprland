@@ -165,6 +165,7 @@
     swaybg
     swaylock
     xwayland-satellite
+    rofi-power-menu
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
