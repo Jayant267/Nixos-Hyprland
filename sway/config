@@ -17,6 +17,10 @@ set $right l
 set $term alacritty
 # Your preferred application launcher
 set $menu rofi -show drun -show-icons
+# Your preferred browser
+set $brow firefox
+# Your preferred file manager
+set $file nemo
 
 ### Output configuration
 #
@@ -75,6 +79,10 @@ input type:touchpad {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    
+    # Start your Apps
+    bindsym $mod+c exec $brow
+    bindsym $mod+g exec $file    
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
