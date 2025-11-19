@@ -73,6 +73,9 @@
   # Enable Niri
   programs.niri.enable = true;
 
+  # Enable Sway
+  programs.sway.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
