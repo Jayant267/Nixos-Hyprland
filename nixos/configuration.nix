@@ -160,7 +160,7 @@
     hyprshot
     hyprlock
     alacritty
-    rofi-wayland
+    rofi
     material-cursors
     nwg-look
     nwg-displays
@@ -200,8 +200,6 @@
     qemu = {
       package = pkgs.qemu_full; # Use KVM for better performance
       swtpm.enable = true;     # Enable TPM support (optional)
-      ovmf.enable = true;      # Enable UEFI support
-      ovmf.packages = [ pkgs.OVMFFull ]; # OVMF for UEFI
     };
   };
  
