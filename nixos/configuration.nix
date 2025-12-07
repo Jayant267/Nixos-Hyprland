@@ -169,6 +169,7 @@
     swaylock
     xwayland-satellite
     rofi-power-menu
+    docker-compose
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -207,11 +208,14 @@
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
+  virtualisation.docker.enable = true;
+  users.extraGroups.docker.members = [ "jayant" ];
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+   networking.firewall.allowedTCPPorts = [ 3001 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   networking.firewall.enable = true;
