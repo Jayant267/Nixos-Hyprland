@@ -61,12 +61,16 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  #services.xserver.displayManager.gdm.enable = true;
-  #services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;  
+  #services.displayManager.gdm.enable = true;
+  #services.desktopManager.gnome.enable = true;
+  #services.xserver.displayManager.lightdm.enable = true;  
   services.xserver.desktopManager.cinnamon.enable = true;
-  
-  # Enable Hyprland
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
+
+ # Enable Hyprland
   programs.hyprland.enable = true;
   programs.hyprland.xwayland.enable = true;
 
@@ -162,6 +166,9 @@
     alacritty
     rofi
     material-cursors
+    p7zip
+    ocs-url
+    kdePackages.kde-gtk-config
     nwg-look
     nwg-displays
     vim-full
