@@ -147,6 +147,7 @@
     qemu_full
     virtiofsd
     OVMFFull
+    vde2
     hdparm
     virglrenderer
     mesa
