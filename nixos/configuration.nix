@@ -112,7 +112,7 @@
   users.users.jayant = {
     isNormalUser = true;
     description = "Jayant";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "kvm" "video" "render" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -132,6 +132,7 @@
     vlc
     exfat
     ntfs3g
+    usbutils
     fastfetch
     exfatprogs
     tor-browser
@@ -212,18 +213,23 @@
     };
   };
  
-  services.ollama.enable = true;
+  # services.ollama.enable = true;
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
-  virtualisation.docker.enable = true;
-  users.extraGroups.docker.members = [ "jayant" ];
+  # Allow QEMU to access specific USB devices without sudo
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="8564", ATTRS{idProduct}=="1000", MODE="0666"
+  '';
+
+  # virtualisation.docker.enable = true;
+  # users.extraGroups.docker.members = [ "jayant" ];
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-   networking.firewall.allowedTCPPorts = [ 3001 ];
+  # networking.firewall.allowedTCPPorts = [ 3001 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   networking.firewall.enable = true;
