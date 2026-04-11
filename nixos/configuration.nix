@@ -179,6 +179,7 @@
     xwayland-satellite
     rofi-power-menu
     docker-compose
+    wireguard-tools
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -203,7 +204,7 @@
   hardware.graphics.enable = true; 
   services.qemuGuest.enable = true;
   services.spice-vdagentd.enable = true;
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-intel" "wireguard" ];
   boot.kernelParams = [ "intel_iommu=on" "iommu=pt" ];  
   virtualisation.libvirtd = {
     enable = true;
@@ -219,8 +220,10 @@
 
   # Allow QEMU to access specific USB devices without sudo
   services.udev.extraRules = ''
-    SUBSYSTEM=="usb", ATTRS{idVendor}=="8564", ATTRS{idProduct}=="1000", MODE="0666"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="5769", MODE="0666"
   '';
+
+  networking.wireguard.enable = true;
 
   # virtualisation.docker.enable = true;
   # users.extraGroups.docker.members = [ "jayant" ];
