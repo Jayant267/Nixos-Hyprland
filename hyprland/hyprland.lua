@@ -218,8 +218,8 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
--- Scrolling navigation (Safe fallback using exec_cmd)
-hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("hyprctl dispatch layoutmsg 'move +col'"))
-hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd("hyprctl dispatch layoutmsg 'move -col'"))
-hl.bind(mainMod .. " + SHIFT + period", hl.dsp.exec_cmd("hyprctl dispatch layoutmsg 'swapcol r'"))
-hl.bind(mainMod .. " + SHIFT + comma", hl.dsp.exec_cmd("hyprctl dispatch layoutmsg 'swapcol l'"))
+-- Scrolling navigation
+hl.bind(mainMod .. " + period", hl.dsp.layout("move +col"))
+hl.bind(mainMod .. " + comma", hl.dsp.layout("move -col"))
+hl.bind(mainMod .. " + SHIFT + period", hl.dsp.layout("swapcol r"))
+hl.bind(mainMod .. " + SHIFT + comma", hl.dsp.layout("swapcol l"))
