@@ -1,0 +1,161 @@
+/* =============================================================================
+ * Waybar Global Styles 
+ * ===========================================================================*/
+
+* {
+    /* Strictly using Unifont */
+    font-family: "Unifont";
+    font-size: 14px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* Main Bar Background */
+window#waybar {
+    background-color: rgba(30, 30, 46, 0.85);
+    color: #cdd6f4;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Tooltips */
+tooltip {
+    background: rgba(30, 30, 46, 0.95);
+    border: 1px solid #cba6f7;
+    border-radius: 8px;
+}
+tooltip label {
+    color: #cdd6f4;
+}
+
+/* =============================================================================
+ * Module Spacing & Alignment
+ * ===========================================================================*/
+
+.modules-left, .modules-center, .modules-right {
+    padding: 0 10px;
+}
+
+#workspaces, #window, #network, #cpu, #memory, #battery, #clock, #tray {
+    padding: 0 6px;
+    margin: 3px 0;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* =============================================================================
+ * Left Modules: Workspaces & Window
+ * ===========================================================================*/
+
+#workspaces {
+    padding: 0;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    margin: 3px 4px;
+    color: #a6adc8;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #cdd6f4;
+}
+
+#workspaces button.active, 
+#workspaces button.focused {
+    background-color: rgba(203, 166, 247, 0.2);
+    color: #cba6f7;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background-color: rgba(243, 139, 168, 0.2);
+    color: #f38ba8;
+}
+
+#window {
+    color: #89b4fa;
+    font-weight: bold;
+}
+
+/* =============================================================================
+ * Right Modules: Hardware & Stats
+ * ===========================================================================*/
+
+#cpu {
+    color: #fab387;
+    font-weight: bold;
+}
+
+#memory {
+    color: #89dceb;
+    font-weight: bold;
+}
+
+#network {
+    color: #a6e3a1;
+    font-weight: bold;
+}
+#network.disconnected {
+    color: #f38ba8;
+    font-weight: bold;
+}
+
+#battery {
+    color: #a6e3a1;
+    font-weight: bold;
+}
+
+#battery.warning {
+    color: #f9e2af;
+    font-weight: bold;
+}
+
+#battery.critical {
+    color: #f38ba8;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    font-weight: bold;
+}
+
+#battery.charging {
+    color: #94e2d5;
+    font-weight: bold;
+}
+
+#clock {
+    color: #cba6f7;
+    font-weight: bold;
+}
+
+/* =============================================================================
+ * Custom Separator
+ * ===========================================================================*/
+
+#custom-sep {
+    color: rgba(30, 30, 46, 0.85);
+    padding: 0 0px;
+    font-size: 16px;
+}
+
+/* =============================================================================
+ * Animations
+ * ===========================================================================*/
+
+@keyframes blink {
+    to {
+        color: #cdd6f4;
+        background-color: #f38ba8;
+    }
+}
