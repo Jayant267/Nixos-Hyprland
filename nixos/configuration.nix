@@ -214,17 +214,19 @@
     };
   };
  
-  # services.ollama.enable = true;
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-
+  xdg.portal.extraPortals = with pkgs; [
+  xdg-desktop-portal-gtk
+  xdg-desktop-portal-wlr
+];
+  
   # Allow QEMU to access specific USB devices without sudo
   services.udev.extraRules = ''
     SUBSYSTEM=="usb", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="5769", MODE="0666"
   '';
 
   networking.wireguard.enable = true;
-
+  # services.ollama.enable = true;
   # virtualisation.docker.enable = true;
   # users.extraGroups.docker.members = [ "jayant" ];
 

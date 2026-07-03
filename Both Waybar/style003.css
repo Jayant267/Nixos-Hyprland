@@ -63,11 +63,13 @@ tooltip label {
     background-color: transparent;
     border-radius: 6px;
     transition: all 0.2s ease;
+    font-weight: bold;
 }
 
 #workspaces button:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: #cdd6f4;
+    font-weight: bold;
 }
 
 #workspaces button.active, 
@@ -80,6 +82,7 @@ tooltip label {
 #workspaces button.urgent {
     background-color: rgba(243, 139, 168, 0.2);
     color: #f38ba8;
+    font-weight: bold;
 }
 
 #window {
